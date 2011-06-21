@@ -13,8 +13,10 @@ MainWindow::MainWindow(QWidget *parent) :
     this->scene.addRect(0,0,300,400);
 
     this->view = new QGraphicsView(&scene);
-    scene.addLine(this->x,0,this->x,this->scene.height(),QPen(Qt::red));
-    scene.addLine(0,this->y,this->scene.width(),this->y,QPen(Qt::red));
+
+    scene.addLine(150,0,150,this->scene.height(),QPen(Qt::red));
+    scene.addLine(0,150,this->scene.width(),150,QPen(Qt::red));
+
     this->scene.setBackgroundBrush(QBrush(Qt::darkBlue));
     this->ui->grid->addWidget(this->view);
 
@@ -524,16 +526,49 @@ void MainWindow::on_actionAbout_triggered()
 
 void MainWindow::on_graficar_clicked()
 {
-    int de = this->ui->intervale1->text().trimmed().toFloat();
-    int a = this->ui->intervalo2->text().trimmed().toFloat();
+    int de = this->ui->intervale1->text().trimmed().toInt();
+    int a = this->ui->intervalo2->text().trimmed().toInt();
     QString funcion = this->ui->funcion_graf->text().trimmed();
 
     this->evaluarGrafica(de,a,funcion);
 }
 void MainWindow::evaluarGrafica(int de1, int hasta,QString funcion)
 {
+    qDebug()<<"holaaaaa";
+    qDebug()<<funcion;
+    QString func;
     for(int r=de1;r<hasta;r++){
-   this->solve(funcion); // aki graficar
+        qDebug()<<"aki entra el maje";
+        func = this->cambiarLasx(funcion,r);
+        qDebug()<<func;
+
+        QString post;
+        for(int r=0;r<c->postfijo.count();r++)
+        {
+            post.append(c->postfijo.at(r));
+        }
+
+        int TempY = post.toInt();
+        int TempX = r;
+
+
+
 }
+
+}
+QString MainWindow::cambiarLasx(QString f, int porCual)
+{
+    QString tmp;
+    tmp.setNum(porCual);
+    QChar o = tmp.at(0);
+    for(int r=0;r<f.count();r++)
+    {
+        if(f.at(r)=='x')
+        {
+            f[r] = o;
+        }
+
+    }
+    return f;
 
 }

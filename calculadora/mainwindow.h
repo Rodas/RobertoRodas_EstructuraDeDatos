@@ -47,6 +47,7 @@ public:
     QString funcion;
     void graficar(int x,int y);
     void evaluarGrafica(int de1,int hasta,QString funcion);
+    QString cambiarLasx(QString f,int porCual);
 
 private:
     Ui::MainWindow *ui;
