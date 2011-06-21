@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>487</width>
-    <height>452</height>
+    <width>466</width>
+    <height>444</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,7 +19,7 @@
      <rect>
       <x>10</x>
       <y>0</y>
-      <width>461</width>
+      <width>451</width>
       <height>391</height>
      </rect>
     </property>
@@ -472,7 +472,7 @@ background-image: url(:/imagenes/gambito1.jpg);</string>
       <property name="geometry">
        <rect>
         <x>294</x>
-        <y>190</y>
+        <y>110</y>
         <width>51</width>
         <height>20</height>
        </rect>
@@ -485,14 +485,14 @@ background-image: url(:/imagenes/gambito1.jpg);</string>
        </font>
       </property>
       <property name="text">
-       <string>F(X)=</string>
+       <string>y=</string>
       </property>
      </widget>
      <widget class="QGroupBox" name="groupBox">
       <property name="geometry">
        <rect>
         <x>334</x>
-        <y>92</y>
+        <y>12</y>
         <width>121</width>
         <height>80</height>
        </rect>
@@ -551,7 +551,7 @@ background-image: url(:/imagenes/gambito1.jpg);</string>
       <property name="geometry">
        <rect>
         <x>310</x>
-        <y>250</y>
+        <y>170</y>
         <width>75</width>
         <height>23</height>
        </rect>
@@ -564,10 +564,84 @@ background-image: url(:/imagenes/gambito1.jpg);</string>
       <property name="geometry">
        <rect>
         <x>340</x>
-        <y>190</y>
+        <y>110</y>
         <width>101</width>
         <height>20</height>
        </rect>
+      </property>
+     </widget>
+     <widget class="QTableWidget" name="tableWidget_rodas">
+      <property name="geometry">
+       <rect>
+        <x>390</x>
+        <y>160</y>
+        <width>31</width>
+        <height>171</height>
+       </rect>
+      </property>
+      <attribute name="horizontalHeaderVisible">
+       <bool>false</bool>
+      </attribute>
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>15</number>
+      </attribute>
+      <attribute name="horizontalHeaderHighlightSections">
+       <bool>false</bool>
+      </attribute>
+      <attribute name="horizontalHeaderMinimumSectionSize">
+       <number>15</number>
+      </attribute>
+      <attribute name="verticalHeaderVisible">
+       <bool>false</bool>
+      </attribute>
+      <attribute name="verticalHeaderDefaultSectionSize">
+       <number>15</number>
+      </attribute>
+      <attribute name="verticalHeaderHighlightSections">
+       <bool>false</bool>
+      </attribute>
+      <attribute name="verticalHeaderMinimumSectionSize">
+       <number>15</number>
+      </attribute>
+     </widget>
+     <widget class="QLabel" name="label_9">
+      <property name="geometry">
+       <rect>
+        <x>390</x>
+        <y>140</y>
+        <width>16</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>x</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_10">
+      <property name="geometry">
+       <rect>
+        <x>410</x>
+        <y>140</y>
+        <width>16</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>y</string>
       </property>
      </widget>
     </widget>
@@ -578,7 +652,7 @@ background-image: url(:/imagenes/gambito1.jpg);</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>487</width>
+     <width>466</width>
      <height>21</height>
     </rect>
    </property>

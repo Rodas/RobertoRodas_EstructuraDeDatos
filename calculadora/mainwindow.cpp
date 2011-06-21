@@ -534,6 +534,10 @@ void MainWindow::on_graficar_clicked()
 }
 void MainWindow::evaluarGrafica(int de1, int hasta,QString funcion)
 {
+    this->ui->tableWidget_rodas->setRowCount(hasta);
+    this->ui->tableWidget_rodas->setColumnCount(2);
+
+
     qDebug()<<"holaaaaa";
     qDebug()<<funcion;
     QString func;
@@ -541,19 +545,25 @@ void MainWindow::evaluarGrafica(int de1, int hasta,QString funcion)
         qDebug()<<"aki entra el maje";
         func = this->cambiarLasx(funcion,r);
         qDebug()<<func;
+        this->solve(func);
 
         QString post;
-        for(int r=0;r<c->postfijo.count();r++)
+        for(int i=0;i<c->postfijo.count();i++)
         {
-            post.append(c->postfijo.at(r));
+            post.append(c->postfijo.at(i));
         }
-
+        qDebug()<<"estee"<<post;
         int TempY = post.toInt();
         int TempX = r;
+        QTableWidgetItem *item = new QTableWidgetItem(QString::number(TempX));
+        this->ui->tableWidget_rodas->setItem(r,0,item);
+        QTableWidgetItem *item2 = new QTableWidgetItem(QString::number(TempY));
+        this->ui->tableWidget_rodas->setItem(r,1,item2);
 
 
 
-}
+
+    }
 
 }
 QString MainWindow::cambiarLasx(QString f, int porCual)
